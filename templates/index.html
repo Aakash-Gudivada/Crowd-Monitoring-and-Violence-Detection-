@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Violence Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+        <div class="logo">
+            🛡️ <span>Violence Detection</span>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <a class="active">🏠 Home</a>
+        <a>🎥 Videos</a>
+        <a>👤 Account</a>
+        <a class="logout">↪ Sign Out</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Crowd Violence Detection System</h1>
+    <p>Real-time AI-powered monitoring and analysis</p>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="card">
+        <div class="icon blue">🛡️</div>
+        <h3>Active Monitoring</h3>
+        <p>24/7 surveillance</p>
+    </div>
+
+    <div class="card">
+        <div class="icon green">📈</div>
+        <h3>AI Detection</h3>
+        <p>Advanced algorithms</p>
+    </div>
+
+    <div class="card">
+        <div class="icon orange">🎥</div>
+        <h3>Video Analysis</h3>
+        <p>Instant results</p>
+    </div>
+</section>
+
+<!-- UPLOAD -->
+<section class="upload-box">
+    <h2>Upload Video for Analysis</h2>
+
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <label class="drop-zone">
+            ⬆️
+            <span>Click to upload video</span>
+            <small>Supported formats: MP4, MOV, AVI, WebM</small>
+            <input type="file" name="video" accept="video/*" required hidden>
+        </label>
+
+        <button type="submit">Analyze Video</button>
+    </form>
+</section>
+
+<!-- RESULT -->
+{% if message %}
+<div class="result">
+    {{ message | safe }}
+</div>
+{% endif %}
+
+
+
+</body>
+</html>

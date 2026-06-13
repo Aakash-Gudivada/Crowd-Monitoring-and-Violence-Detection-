@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+
+  <div class="center">
+    <h1>Crowd Violence Detection System</h1>
+    <p style="color:#94A3B8; margin-top:8px;">
+      Real-time AI-powered monitoring and analysis
+    </p>
+  </div>
+
+  <div class="grid-3" style="margin-top:50px;">
+    <div class="card">
+      <h3>Active Monitoring</h3>
+      <p style="color:#94A3B8;">24/7 surveillance</p>
+    </div>
+    <div class="card">
+      <h3>AI Detection</h3>
+      <p style="color:#94A3B8;">Advanced algorithms</p>
+    </div>
+    <div class="card">
+      <h3>Video Analysis</h3>
+      <p style="color:#94A3B8;">Instant results</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:60px;">Real-time Detection Tags</h2>
+  <div>
+    <span class="tag red">Violence Alert</span>
+    <span class="tag blue">Crowd Detected</span>
+    <span class="tag green">High Activity</span>
+    <span class="tag orange">Unusual Behavior</span>
+  </div>
+
+  <h2 style="margin-top:60px;">Upload Video for Analysis</h2>
+
+  <form class="upload-box" action="/analyze" method="post" enctype="multipart/form-data">
+    <input type="file" id="file" name="video" hidden>
+    <label for="file">
+      ⬆ Click to upload video
+      <p style="color:#94A3B8; margin-top:10px;">
+        MP4, MOV, AVI, WebM
+      </p>
+    </label>
+  </form>
+
+</div>
+
+{% endblock %}

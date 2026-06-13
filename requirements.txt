@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+jinja2
+
+torch
+torchvision
+torchaudio
+
+ultralytics
+opencv-python
+einops
+numpy
