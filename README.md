@@ -156,7 +156,7 @@ Interested in:
 
 LinkedIn: https://www.linkedin.com/in/aakashgudivada/
 
-GitHub: [Your GitHub URL]
+
 
 ---
 
